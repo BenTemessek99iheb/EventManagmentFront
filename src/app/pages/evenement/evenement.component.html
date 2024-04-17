@@ -48,6 +48,12 @@
     <label>Salle: </label>
    
     <input type="text" [(ngModel)]="selectedEvent.salle" name="salle" required minlength="3">
+    
+    
+    <label>Price: </label>
+    <input type="number" [(ngModel)]="selectedEvent.price" name="price" required min="0">
+
+
     <div *ngIf="!isValidEvent()" class="error-message">La salle est requise et doit comporter au moins 3 caractères.</div>
     <!-- Le champ salle est obligatoire et doit avoir une longueur minimale de 3 caractères -->
 

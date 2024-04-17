@@ -11,7 +11,6 @@ import { CandidatureComponent } from './pages/candidature/candidature.component'
 import { UserprofilComponent } from './pages/userprofil/userprofil.component';
 import { EvenementUserComponent } from './pages/evenement-user/evenement-user.component';
 import { ParticiperEventComponent } from './participer-event/participer-event.component';
-import { CheckoutComponent } from './checkout/checkout.component';
 import { CancelPaymentComponent } from './cancel-payment/cancel-payment.component';
 import { SuccessPaymentComponent } from './success-payment/success-payment.component';
 const routes: Routes = [
@@ -27,10 +26,7 @@ const routes: Routes = [
   {path:'userprofil',component:UserprofilComponent},
   {path:'EvenementUser',component:EvenementUserComponent },
   {path:'PartciperEvent/:eventId',component:ParticiperEventComponent },
-  {
-    path: 'checkout',
-    component: CheckoutComponent,
-  },
+ 
   { path: 'cancel', component: CancelPaymentComponent },
   { path: 'success', component: SuccessPaymentComponent },
 

@@ -1,50 +1,86 @@
+/* evenement-user.component.css */
+
 .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.event-card {
-  width: calc(33.33% - 10px);
-  background-color: #DEDEDE;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
+.blog-horizontal .card-img-actions {
+  width: 45%;
+  float: left;
+  max-width: 25rem;
+  z-index: 10;
 }
 
-.event-details {
-  flex: 1;
-  margin-left: 10px;
+a {
+  text-decoration: none !important;
 }
 
-.event-actions {
+.card {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .1875rem;
 }
 
-.participer-btn,
-.like-btn,
-.dislike-btn {
-  background-color: red;
+.like-button,
+.dislike-button {
+  background-color: #28a745;
   color: #fff;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  margin-right: 70px; /* Ajoutez cette ligne pour réduire l'espace entre les boutons */
-}
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
+  margin-right: 10px;
 }
 
-.pulse {
-  animation: pulse 1s infinite;
+.like-button:hover,
+.dislike-button:hover {
+  background-color: #218838;
+}
+
+.course-button {
+  border: 1px solid #b20909;
+  padding: 5px;
+  background-color: #b20909;
+  padding-right: 10px;
+  padding-top: 3px;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.course-button:hover {
+  color: #fff;
+}
+/* evenement-user.component.css */
+
+.share-button {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-right: 10px;
+  background-color: #a00d10; /* Couleur Facebook */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.share-button:hover {
+  background-color: #a00d10; /* Couleur Facebook au survol */
+}
+
+.share-button:last-child {
+  margin-right: 0;
+}
+.fas fa-share{
+  background-color: #a00d10;
+
 }
 

@@ -13,5 +13,7 @@ export class EventModel
    url: string = '';
        "price":number;
     "nbparticipants": number 
+    safeUrl?: any;
+
 
 }

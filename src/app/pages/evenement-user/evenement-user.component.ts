@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { EventModel } from 'src/app/model/event-model'; // Assurez-vous d'importer le modèle EventModel
 import { EvenementService } from 'src/app/service/evenement.service'; // Assurez-vous d'importer le service EvenementService
@@ -14,7 +15,7 @@ export class EvenementUserComponent {
   showShareMenu: boolean = false; // Déclarez la propriété showShareMenu ici
   isLoading = false; // Flag to indicate image loading
 
-  constructor(private evenementService: EvenementService,private router:Router) { }
+  constructor(private evenementService: EvenementService,private router:Router,private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     this.loadEvents();
@@ -25,14 +26,20 @@ export class EvenementUserComponent {
     // Optionally display a message to the user, e.g., "Image unavailable"
   }
   loadEvents(): void {
-    this.isLoading = true; // Set loading flag before fetching events
+    this.isLoading = true;
     this.evenementService.getEvents().subscribe(data => {
-      this.events = data.map(event => ({ ...event, isPulsating: false }));
-      this.isLoading = false; // Reset loading flag after data retrieval
+        this.events = data.map(event => {
+            const relativePath = event.url;
+            const safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`https://drive.google.com/drive/folders/1J41NQ5-0WQRgp5FCwaMgIArOY0KAZ12i${relativePath}`);
+            event.safeUrl = safeUrl; // Assign directly to event object
+            return event;  // Return the updated event
+        });
+        this.isLoading = false;
+    }, error => {
+        this.handleError(error);  // Handle error
     });
-  }
-  
-  
+}
+
 
   participer(event: EventModel): void {
     event.isPulsating = true;

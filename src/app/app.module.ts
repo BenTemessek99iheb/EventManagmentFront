@@ -25,7 +25,6 @@ import { CancelPaymentComponent } from './cancel-payment/cancel-payment.componen
 import { SuccessPaymentComponent } from './success-payment/success-payment.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { UploadFileComponent } from './upload-file/upload-file.component';
 import { AllFilesComponent } from './all-files/all-files.component';
 
 @NgModule({
@@ -48,7 +47,6 @@ import { AllFilesComponent } from './all-files/all-files.component';
     ParticiperEventComponent,
     CancelPaymentComponent,
     SuccessPaymentComponent,
-    UploadFileComponent,
     AllFilesComponent,
   ],
   imports: [
