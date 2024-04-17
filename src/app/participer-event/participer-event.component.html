@@ -1,0 +1,70 @@
+<div id="container">	
+	
+    <!-- Start	Product details -->
+        <div class="product-details">
+            
+            <!-- 	Product Name -->
+        <h1>{{ event?.titre }}</h1>
+    <!-- 		<span class="hint new">New</span> -->
+    <!-- 		<span class="hint free-shipping">Free Shipping</span> -->
+    <!-- 		the Product rating -->
+        <span class="hint-star star">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+        </span>
+            
+        
+    <!-- The most important information about the product -->
+            <p class="information">" {{ event?.description }} "</p>
+    
+            
+            
+    <!-- 		Control -->
+    <div class="control">
+        
+    <!-- Start Button buying -->
+        <button class="btn" (click)="handlePayment()">
+    <!-- 		the Price -->
+         <span class="price">{{ event?.price }}</span>
+    <!-- 		shopping cart icon-->
+       <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+    <!-- 		Buy Now / ADD to Cart-->
+       <span class="buy">Buy Now</span>
+     </button>
+        <!-- End Button buying -->
+        
+    </div>
+                
+    </div>
+        
+    <!-- 	End	Product details   -->
+        
+        
+        
+    <!-- 	Start product image & Information -->
+        
+    <div class="product-image">
+        
+        <img src="https://sc01.alicdn.com/kf/HTB1Cic9HFXXXXbZXpXXq6xXFXXX3/200006212/HTB1Cic9HFXXXXbZXpXXq6xXFXXX3.jpg" alt="Omar Dsoky">
+        
+    <!-- 	product Information-->
+    <div class="info">
+        <h2>The Description</h2>
+        <ul>
+            <li><strong>Date Evenement: </strong>{{event?.dateEvt}}</li>
+            <li><strong>Salle : </strong>{{event?.salle}}</li>
+            <li><strong>Participants: </strong>{{event?.like}}</li>
+
+        </ul>
+    </div>
+    </div>
+    <!--  End product image  -->
+    
+    
+    </div>
+    
+    
+    

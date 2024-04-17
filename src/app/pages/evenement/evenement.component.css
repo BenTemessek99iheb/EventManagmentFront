@@ -1,0 +1,63 @@
+/* Styles pour le tableau */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #ccc; /* Bordure du tableau */
+}
+
+th, td {
+  border: 1px solid #ccc; /* Bordures des cellules */
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2; /* Couleur de fond pour les entêtes */
+}
+
+/* Styles pour les boutons */
+button {
+  background-color: #ff4d4d; /* Couleur de fond des boutons (rouge) */
+  color: white; /* Couleur du texte */
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #cc0000; /* Changement de couleur au survol */
+}
+
+/* Styles pour les formulaires */
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error-message {
+  color: #ff0000; /* Couleur rouge pour les messages d'erreur */
+  margin-top: 5px;
+}
+
+/* Bouton Ajouter un evenement */
+button[type="submit"] {
+  background-color: #ff4d4d; /* Couleur de fond rouge */
+}
+
+button[type="submit"]:hover {
+  background-color: #cc0000; /* Changement de couleur au survol */
+}

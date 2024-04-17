@@ -1,0 +1,50 @@
+<!-- evenement-user.component.html -->
+
+<div class="container">
+  <div *ngFor="let event of events" class="event-card">
+    <div class="dropdown event-actions">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="shareDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-share"></i> <!-- Icône de partage -->
+      </button>
+      <div class="dropdown-menu" aria-labelledby="shareDropdown">
+        <a class="dropdown-item" href="#" (click)="shareOnFacebook(event)">Facebook</a>
+        <a class="dropdown-item" href="#" (click)="shareOnInstagram(event)">Instagram</a>
+        <!-- Ajoutez d'autres options de partage ici si nécessaire -->
+      </div>
+    </div>
+    <div class="logo-container">
+      <img [src]="event.url" alt="Event Image" (error)="handleError($event)">
+      </div>
+    <div class="details-container">
+      <div class="date-container">
+        <i class="far fa-calendar"></i>
+        <span>Date de publication : {{ event.dateEvt }}</span>
+      </div>
+      <div class="date-container">
+        <i class=""></i>
+        <span>Participants : {{ event.nbparticipants }}</span>
+      </div>
+      <div class="title-container">
+        <h3>{{ event.titre }}</h3>
+      </div>
+      <div class="location-container">
+        <i class="fas fa-map-marker-alt"></i>
+        {{ event.salle }}
+      </div>
+      <div class="event-actions">
+        <button class="participer-btn" (click)="participer(event)">Participer</button>
+        <button class="like-btn" (click)="like(event)">
+          <i class="fas fa-thumbs-up"></i>
+           <!-- Ajout de l'icône "thumbs-up" pour le bouton "Like" -->
+        </button>
+        <button class="dislike-btn" (click)="dislike(event)">
+          <i class="fas fa-thumbs-down"></i>
+          <!-- Ajout de l'icône "thumbs-down" pour le bouton "Dislike" -->
+        </button>
+      </div>
+      
+      <!-- Affichage du message d'alerte spécifique à chaque événement -->
+      <div *ngIf="event.message" class="alert">{{ event.message }}</div>
+    </div>
+  </div>
+</div>

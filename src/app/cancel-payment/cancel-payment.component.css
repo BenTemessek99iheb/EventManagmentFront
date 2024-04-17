@@ -1,0 +1,130 @@
+/* Define the primary color variable */
+:root {
+    --primary-col: #6C7BEE;
+  }
+  
+  /* Style the .bg element */
+  .bg {
+    background-color: var(--primary-col);
+    width: 480px;
+    overflow: hidden;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 40px;
+    font-family: 'Roboto';
+    margin-top: 40px;
+  }
+  
+  /* Style the .card element */
+  .card {
+    background-color: white;
+    width: 100%;
+    float: left;
+    margin-top: 40px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 80px 30px 25px 30px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  
+  /* Style the .card__success element */
+  .card__success {
+    position: absolute;
+    top: -50px;
+    left: 145px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #ad0a0a;
+    border: 5px solid white;
+  }
+  
+  /* Style the i element inside .card__success */
+  .card__success i {
+    color: white;
+    line-height: 100px;
+    font-size: 45px;
+  }
+  
+  /* Style the .card__msg element */
+  .card__msg {
+    text-transform: uppercase;
+    color: #55585b;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  /* Style the .card__submsg element */
+  .card__submsg {
+    color: #959a9e;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0px;
+  }
+  
+  /* Style the .card__body element */
+  .card__body {
+    background-color: #f8f6f6;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 30px;
+    float: left;
+    box-sizing: border-box;
+    padding: 30px;
+  }
+  
+  /* Style the .card__avatar element */
+  .card__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 7px;
+  }
+  
+  /* Style the .card__recipient-info element */
+  .card__recipient-info {
+    display: inline-block;
+  }
+  
+  /* Style the .card__recipient element */
+  .card__recipient {
+    color: #232528;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  /* Style the .card__email element */
+  .card__email {
+    color: #838890;
+    text-align: left;
+    margin-top: 0px;
+  }
+  
+  /* Style the .card__price element */
+  .card__price {
+    color: #232528;
+    font-size: 70px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+  
+  /* Style the span element inside .card__price */
+  .card__price span {
+    font-size: 60%;
+  }
+  
+  /* Style the .card__method element */
+  .card__method {
+    color: #d3cece;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 11px;
+    
+  }  

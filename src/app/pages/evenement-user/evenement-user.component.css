@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.event-card {
+  width: calc(33.33% - 10px);
+  background-color: #DEDEDE;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.event-details {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.event-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.participer-btn,
+.like-btn,
+.dislike-btn {
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 70px; /* Ajoutez cette ligne pour réduire l'espace entre les boutons */
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}
+
