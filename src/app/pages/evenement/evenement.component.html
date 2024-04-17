@@ -11,6 +11,8 @@
       <th>Description</th>
       <th>Date</th>
       <th>Salle</th>
+      <td>price</td>
+
       <th>Actions</th>
     </tr>
   </thead>
@@ -20,6 +22,8 @@
       <td>{{ event.description }}</td>
       <td>{{ event.dateEvt }}</td>
       <td>{{ event.salle }}</td>
+      <td>{{ event.price }}</td>
+
       
       <td>
         <button (click)="selectEvent(event)">Modifier</button>
